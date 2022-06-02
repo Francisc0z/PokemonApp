@@ -1,0 +1,34 @@
+
+
+<div class="row">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Buscar</span>
+      <input type="text" 
+      class="form-control" 
+      aria-label="Sizing example input" 
+      aria-describedby="inputGroup-sizing-default"
+      [(ngModel)]="termino"
+      (keyup)="busqueda()"
+      >
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 p-3 d-flex justify-content-center" *ngFor="let pokemones of pokemon2 | filtro:page; let i = index">
+        <div class="card" style="width: 18rem; height: 27.5rem;">
+        <img class="card-img-top" src="assets/pokemon/{{pokemones.pic}}.png" alt="Card image cap">
+        <div class="card-body row justify-content-center">
+          <h5 class="card-title">{{pokemones.name | titlecase}}</h5>
+          <p class="card-text"> {{pokemonHabilidades[i].name}} </p>
+          <a href="#" class="boton" [routerLink]="['/pokemon/', pokemones.name]" >Ver este Pokemon</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button (click)="prevPage()" class="botonPagination m-3">
+        <<
+      </button>
+      <button (click)="nextPage()" class="botonPagination m-3">
+        >>
+      </button>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+.wrap-login100{
+    height: 25rem;
+
+}
+
+router-outlet{
+    background: linear-gradient(rgba(179, 240, 117, 1), rgba(117, 240, 117, 1));
+}

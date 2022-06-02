@@ -1,0 +1,36 @@
+
+.login100-form-title.p-b-49{
+    width: 100%;
+    padding: 20px;
+    font-size: 30px;
+    margin: 20px 0px;
+}
+.login100-form{
+    border: solid 1px black;
+    padding: 20px;
+    margin: 20px;
+    height: 30rem;
+    
+}
+.wrap-input100{
+    margin-bottom: 20px;
+}
+.txt2{
+    text-decoration: none;
+    color:#0075BE;
+}
+.txt2:hover{
+    transition: all 0.2s;
+    color: #FFCC00;
+}
+.login100-form-btn{
+    border: none;
+    padding: 10px 30px;
+    border-radius: 3px;
+    background-color: #0075BE;
+    color: white;
+}
+.login100-form-btn:hover{
+    opacity: 0.8;
+    transition: all 0.2s;
+}

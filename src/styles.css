@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+.botonPagination{
+    border: none;
+    font-weight: bolder;
+    background-color: #FFCC00;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+.botonPagination:hover{
+    transition: all 0.4s;
+    background-color: #0075BE;
+    color: white;
+}

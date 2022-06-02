@@ -1,0 +1,14 @@
+.tipo{
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.grass{
+    background-color: rgb(164 213 65);
+}
+.poison{
+    background-color: rgb(185 127 201);
+}
+.pokemonImagen{
+    background-color: #FFCC00;
+}

@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col"> # </th>
+        <th scope="col">Nombre</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let items of pokemon | filtro:page ; let i = index">
+        <th scope="row"> {{i+1}} </th>
+        <td> {{items.name}} </td>
+
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-center">
+    <button (click)="prevPage()" class="botonPagination m-3">
+      <<
+    </button>
+    <button (click)="nextPage()" class="botonPagination m-3">
+      >>
+    </button>
+  </div>

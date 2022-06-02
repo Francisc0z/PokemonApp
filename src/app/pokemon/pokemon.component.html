@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-12 pokemonImagen d-flex justify-content-center">
+    <img width="250px" src="assets/pokemon/{{pokemon.id}}.png" alt="Imagen de {{pokemon.forms[0].name}}">
+  </div>
+    <div class="col-12 col-md-12">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descripcion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Nombre:</th>
+                <td>{{pokemon.forms[0].name | titlecase}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Habilidad: </th>
+                <td>{{pokemon.abilities[0].ability.name | titlecase}}</td>
+              </tr>
+              <tbody>
+                <tr>
+                  <th scope="row">Habilidad oculta:</th>
+                  <td>{{pokemon.abilities[1].ability.name | titlecase}}</td>
+                </tr>
+                <tr>
+                  <th scope="row" >Tipo: </th>
+                  <td class="tipo grass">{{pokemon.types[0].type.name | titlecase}}</td>
+                </tr>
+              <tr>
+                <th scope="row" *ngIf="pokemon.types[1].type.name">Tipo Secundario:</th>
+                <td colspan="2" class="tipo poison" *ngIf="pokemon.types[1].type.name">{{pokemon.types[1].type.name | titlecase}}</td>
+              </tr>
+              <tr>
+                <th scope="row" *ngIf="pokemon.types[1].type.name">Juegos donde aparece:</th>
+                <td colspan="2" *ngIf="pokemon.types[1].type.name">
+                    <select class="form-select" aria-label="Default select example">
+                    <option *ngFor="let juego of pokemon.game_indices; i : index" value="i"> {{juego.version.name | titlecase}} </option>
+                    </select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" *ngIf="pokemon.types[1].type.name">Ataques que puede aprender:</th>
+                <td colspan="2" *ngIf="pokemon.types[1].type.name">
+                    <select class="form-select" aria-label="Default select example">
+                        <option *ngFor="let ataques of pokemon.moves" value="i"> {{ataques.move.name | titlecase}} </option>
+                    </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <div class="col-12 col-md-6">
+        <img src="" alt="">
+    </div>
+</div>
+<pre> {{pokemon.id | json}} </pre>

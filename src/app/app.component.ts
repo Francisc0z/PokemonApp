@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PokemonApp';
+
+  corroborarStorage(){
+    if(localStorage.getItem('token')){
+      return true;
+    }
+    return false
+  }
 }
